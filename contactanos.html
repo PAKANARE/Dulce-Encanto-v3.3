@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Dulce Encanto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .Logo-Site {position: fixed; top: 20px; left: 20px; width: 30px;}
+        .bg-orange-50 { background-color: #fff7ed; }
+        .bg-orange-100 { background-color: #ffedd5; }
+        .bg-red-600 { background-color: #dc2626; }
+        .text-red-800 { color: #991b1b; }
+        .hover\:text-red-600:hover { color: #dc2626; }
+        .BotonArriba {position: fixed; bottom: 20px; right: 20px; width: 40px;}
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-orange-50">
+<div class="texto" id="principio">
+    <header class="sticky top-0 z-10 bg-orange-100 shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                    <img src="Img/LogoDulceEncanto.svg" alt="Logo" height="20px">
+                </div>
+                <span class="text-2xl font-bold text-red-800">Dulce Encanto</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-red-800 hover:text-red-600 transition-colors">Inicio</a>
+                <a href="productos.html" class="text-red-800 hover:text-red-600 transition-colors">Productos</a>
+                <a href="carrito.html" class="text-red-800 hover:text-red-600 transition-colors">Carrito</a>
+                <a href="pedidos.html" class="text-red-800 hover:text-red-600 transition-colors">Pedidos</a>
+                <a href="contactanos.html" class="text-red-800 hover:text-red-600 transition-colors">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-red-800 mb-8 text-center">Contáctanos</h1>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-red-800 mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" required class="w-full p-2 border border-red-300 rounded">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-red-800 mb-2">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required class="w-full p-2 border border-red-300 rounded">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-red-800 mb-2">Mensaje</label>
+                        <textarea id="message" name="message" required class="w-full p-2 border border-red-300 rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Información de contacto</h2>
+                <p class="mb-2">Dirección: Calle Principal, 123, Ciudad</p>
+                <p class="mb-2">Teléfono: +1 234 567 890</p>
+                <p class="mb-2">Email: info@dulceencanto.com</p>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">Síguenos en redes sociales</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-red-800 hover:text-red-600">Facebook</a>
+                        <a href="#" class="text-red-800 hover:text-red-600">Instagram</a>
+                        <a href="#" class="text-red-800 hover:text-red-600">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="BotonArriba">
+<a href="#principio"><img src="Img/boton_de_subida.webp"></a>
+</div>
+    <footer class="bg-orange-100 text-red-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Sección: Sobre Nosotros -->
+                <div>
+                    <h3 class="font-semibold mb-4">Sobre Nosotros</h3>
+                    <p>Somos una panadería artesanal dedicada a crear los más deliciosos productos para nuestros clientes.</p>
+                </div>
+                <!-- Sección: Enlaces Rápidos -->
+                <div>
+                    <h3 class="font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-red-600 transition-colors">Inicio</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition-colors">Productos</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Sección: Contacto -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contacto</h3>
+                    <address class="not-italic">
+                        <p>Calle Principal, 123</p>
+                        <p>Ciudad, País 12345</p>
+                        <p>Teléfono: +1 234 567 890</p>
+                        <p>Email: info@dulceencanto.com</p>
+                    </address>
+                </div>
+                <!-- Sección: Redes Sociales -->
+                <div>
+                    <h3 class="font-semibold mb-4">Síguenos</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Facebook</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Twitter</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Instagram</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">WhatsApp</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Nota de copyright -->
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 Dulce Encanto. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

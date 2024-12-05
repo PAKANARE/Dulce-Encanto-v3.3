@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Dulce Encanto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .Logo-Site {position: fixed; top: 20px; left: 20px; width: 30px;}
+        .bg-orange-50 { background-color: #fff7ed; }
+        .bg-orange-100 { background-color: #ffedd5; }
+        .bg-red-600 { background-color: #dc2626; }
+        .text-red-800 { color: #991b1b; }
+        .hover\:text-red-600:hover { color: #dc2626; }
+        .BotonArriba {position: fixed; bottom: 20px; right: 20px; width: 40px;}
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-orange-50">
+    <div class="texto" id="principio">
+    <header class="sticky top-0 z-10 bg-orange-100 shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                    <img src="Img/LogoDulceEncanto.svg" alt="Logo" height="20px">
+                </div>
+                <span class="text-2xl font-bold text-red-800">Dulce Encanto</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-red-800 hover:text-red-600 transition-colors">Inicio</a>
+                <a href="productos.html" class="text-red-800 hover:text-red-600 transition-colors">Productos</a>
+                <a href="carrito.html" class="text-red-800 hover:text-red-600 transition-colors">Carrito</a>
+                <a href="pedidos.html" class="text-red-800 hover:text-red-600 transition-colors">Pedidos</a>
+                <a href="contactanos.html" class="text-red-800 hover:text-red-600 transition-colors">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-red-800 mb-8 text-center">Nuestros Productos</h1>
+
+        <section id="panes" class="mb-12">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">Panes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/pan andino.jpg" alt="Pan Andino" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pan Andino</h3>
+                        <p class="text-gray-600 mb-4">Perfecto para acompañamiento.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$3.00</p>
+                        <button onclick="addToCart('Pan Andino', 3.00)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/pan acemita.jpg" alt="Pan Acemita" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pan Acemita</h3>
+                        <p class="text-gray-600 mb-4">Clásico Pan Acemita Artesanal.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$5.00</p>
+                        <button onclick="addToCart('Pan Acemita', 5.00)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Pan canilla.jpg" alt="Pan Canilla" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pan Canilla</h3>
+                        <p class="text-gray-600 mb-4">Pan tradicional venezolano.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$2.00</p>
+                        <button onclick="addToCart('Pan Canilla', 2.00)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Pan siciliano.jpg" alt="Pan Siciliano" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pan Siciliano</h3>
+                        <p class="text-gray-600 mb-4">Pan seco Tradicional.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$4.00</p>
+                        <button onclick="addToCart('Pan Siciliano', 4.00)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pasteles" class="mb-12">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">Pasteles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Torta de chocolate.jpg" alt="Torta de Chocolate" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Torta de Chocolate</h3>
+                        <p class="text-gray-600 mb-4">Para los amantes del chocolate.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$7.99</p>
+                        <button onclick="addToCart('Torta de Chocolate', 7.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Torta de Auyama.jpg" alt="Torta de Auyama" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Torta de Auyama</h3>
+                        <p class="text-gray-600 mb-4">Deliciosa torta de calabaza.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$7.99</p>
+                        <button onclick="addToCart('Torta de Auyama', 7.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Torta de coco.jpg" alt="Pastel de Coco" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pastel de Coco</h3>
+                        <p class="text-gray-600 mb-4">Exquisito pastel con sabor a coco.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$9.99</p>
+                        <button onclick="addToCart('Pastel de Coco', 9.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/torta 3 leches.jpg" alt="Torta 3 Leches" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Torta 3 Leches</h3>
+                        <p class="text-gray-600 mb-4">Clásica torta de tres leches.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$9.99</p>
+                        <button onclick="addToCart('Torta 3 Leches', 9.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dulces" class="mb-12">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">Dulces</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Pan de guyaba.jpg" alt="Pan de Guayaba" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pan de Guayaba</h3>
+                        <p class="text-gray-600 mb-4">Delicioso pan relleno de guayaba.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$2.99</p>
+                        <button onclick="addToCart('Pan de Guayaba', 2.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Polvorosas.jpg" alt="Polvorosas" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Polvorosas</h3>
+                        <p class="text-gray-600 mb-4">Tradicionales galletas de mantequilla.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$1.99</p>
+                        <button onclick="addToCart('Polvorosas', 1.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/pastelitos de hojaldre.jpg" alt="Pastelitos de Hojaldres" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pastelitos de Hojaldres</h3>
+                        <p class="text-gray-600 mb-4">Crujientes pastelitos de hojaldre.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$2.99</p>
+                        <button onclick="addToCart('Pastelitos de Hojaldres', 2.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/catalinas.jpg" alt="Catalinas" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Catalinas</h3>
+                        <p class="text-gray-600 mb-4">Tradicionales galletas de melaza.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$2.99</p>
+                        <button onclick="addToCart('Catalinas', 2.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="charcuteria" class="mb-12">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">Charcutería</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Queso Llanero.jpg" alt="Queso llanero" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Queso llanero</h3>
+                        <p class="text-gray-600 mb-4">Queso fresco tradicional.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$9.99</p>
+                        <button onclick="addToCart('Queso llanero', 9.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/Jamon.webp" alt="Jamón" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Jamón</h3>
+                        <p class="text-gray-600 mb-4">Jamón curado de alta calidad.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$9.99</p>
+                        <button onclick="addToCart('Jamón', 9.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/pernil.jpg" alt="Pernil" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Pernil</h3>
+                        <p class="text-gray-600 mb-4">Pernil ahumado y jugoso.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$4.99</p>
+                        <button onclick="addToCart('Pernil', 4.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Img/salchichas.jpg" alt="Salchichas" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Salchichas</h3>
+                        <p class="text-gray-600 mb-4">Salchichas artesanales.</p>
+                        <p class="text-lg font-bold text-red-600 mb-4">$4.99</p>
+                        <button onclick="addToCart('Salchichas', 4.99)" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition-colors">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<div class="BotonArriba">
+<a href="#principio"><img src="Img/boton_de_subida.webp"></a>
+</div>
+    <footer class="bg-orange-100 text-red-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Sobre Nosotros</h3>
+                    <p>Somos una panadería artesanal dedicada a crear los más deliciosos productos para nuestros clientes.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-red-600 transition-colors">Inicio</a></li>
+                        <li><a href="productos.html" class="hover:text-red-600 transition-colors">Productos</a></li>
+                        <li><a href="carrito.html" class="hover:text-red-600 transition-colors">Carrito</a></li>
+                        <li><a href="contactanos.html" class="hover:text-red-600 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Contacto</h3>
+                    <address class="not-italic">
+                        <p>Calle Principal, 123</p>
+                        <p>Ciudad, País 12345</p>
+                        <p>Teléfono: +1 234 567 890</p>
+                        <p>Email: info@dulceencanto.com</p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Síguenos</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Facebook</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Twitter</a>
+                        <a href="#" class="text-red-800 hover:text-red-600 transition-colors">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 Dulce Encanto. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} añadido al carrito`);
+        }
+    </script>
+</body>
+</html>
